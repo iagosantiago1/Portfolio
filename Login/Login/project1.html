@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login e Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logomarca">
+        <a href="project1.html">
+            <img src="Dragon-PNG-3.png" width="80px">
+        </a>
+    </div>
+    <header>
+        <h2 class="logo"></h2>
+        <nav class="navegacao">
+            <a herf="#">Inicio</a>
+            <button class="nav_bar">Sobre</button>
+            <a herf="#">Serviços</a>
+            <button class="nav_bar3">Contatos</button>
+            <button class="bt_login">Login</button>
+
+        </nav>
+
+    </header>
+
+<!--------------------------------------------------------------------------------->
+
+    <div class="wrppr">
+        <span class="icone_fechar">
+            <ion-icon name="close-circle-outline"></ion-icon>
+        </span>
+
+        <div class="form_login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input_box">
+                    <span class="icone"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Usuário</label>
+                </div>
+
+                <div class="input_box">
+                    <span class="icone"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                
+                <div class="lembrar_senha">
+                    <label><input type="checkbox">Lembrar senha</label>
+                    <a href="#">Esqueci a senha</a>
+                </div>
+                <button type="submit" class="bt">Entrar</button>
+                <div class="registrar">
+                    <p>Não tem uma conta? <a href="#" class="registrar_link">Criar conta</a></p>
+                </div>
+            </form>
+        </div>
+<!---------------------------------------------------------------------------------------------------------------------->
+        <div class="form_registro">
+            <h2>Registrar</h2>
+            <form action="#">
+
+                <div class="input_box">
+                    <span class="icone"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Usuário</label>
+                </div>
+
+                <div class="input_box">
+                    <span class="icone"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>E-mail</label>
+                </div>
+
+                <div class="input_box">
+                    <span class="icone"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                
+                <div class="lembrar_senha">
+                    <label><input type="checkbox">Eu aceito os termos & condições</label>
+                </div>
+                <button type="submit" class="bt">Registrar</button>
+                <div class="registrar">
+                    <p>Já tem uma conta? <a href="#" class="login_link">Entrar</a></p>
+                </div>
+            </form>
+        </div>
+
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+    
+    <div class="wrppr2">
+        <span class="icone_fechar2">
+            <ion-icon name="close-circle-outline"></ion-icon>
+        </span>
+        <div class="textme">
+            <h2>Sobre:</h2>
+            <br>
+            <form action="#">
+            <p>
+            Este "site" foi feito para demostrar meus conhecimentos
+            em HTML, CSS e JavaScript. Busco melhorar cada vez mais e mais, estudando aos poucos sei que vou conseguir fazer
+            um ótimo desenvolvimento e me tornar um grande profissional na área de desenvolvimento.
+            </p>
+            </form>
+        </div>
+
+    </div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
+    <div class="wrppr3">
+        <span class="icone_fechar3">
+            <ion-icon name="close-circle-outline"></ion-icon>
+        </span>
+            <div class="contatos">
+        <form action="#">
+                <span class="icone2">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </span>
+                    <a href="https://www.linkedin.com/in/iago-apolo-snt">
+                        LinkedIn
+                    </a>
+                
+                <br>
+                <span class="icone2">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                    <span class="my_mail">iagosantiago@outlook.com</span>
+        </form>
+            </div>
+        
+
+    </div>
+
+
+
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+
+</body>
+</html>

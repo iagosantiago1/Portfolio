@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('wallpaper.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logomarca {
+    position: relative;
+    height: 100vh;
+    position: absolute;
+    top: 7px;
+    left: 46%;
+    transform: translateX(-50%);
+    display: relative;
+    width: 80px;
+    height: auto;
+}
+
+.logomarca a{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%);
+    display: relative;
+    width: 70px;
+    height: auto;
+}
+.logomarca img {
+    display: block;
+    width: 100%;
+    filter: invert(100%);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /*background: red;*/ /* Barra facilitar a formataçao e posicionamento da barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 200px;
+    color: white;
+    user-select: none;
+}
+
+.navegacao a {
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacao a::after {
+    content: '';
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navegacao a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navegacao .nav_bar {
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    background: transparent;
+    border: transparent;
+}
+
+.navegacao .nav_bar::after {
+    content: '';
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navegacao .nav_bar:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.navegacao .bt_login {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navegacao .bt_login:hover{
+    background: #fff;
+    color: #252a3a;
+
+}
+
+.wrppr {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    z-index: 1;
+}
+
+.wrppr.active_popup {
+    transform: scale(1);
+}
+
+.wrppr.active {
+    height: 520px;
+}
+
+.wrppr .icone_fechar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #252a3a;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.wrppr .form_login {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrppr .form_login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrppr.active .form_login{
+    transition: none;
+    transform: translateX(-400px);
+  }
+
+.wrppr .form_registro{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrppr.active .form_registro{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.form_login h2 {
+    font-size: 2em;
+    color: #252a3a;
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #252a3a;
+    margin: 30px 0;
+}
+
+.input_box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #252a3a;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.input_box input:focus~label,
+.input_box input:valid~label {
+    top: -5px;
+}
+
+.input_box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #37436b;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input_box .icone {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #252a3a;
+    line-height: 57px;
+}
+
+.lembrar_senha{
+    font-size: .9em;
+    color: #252a3a;
+    font-weight: 500;
+    margin: -15px 0 15px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lembrar_senha label input {
+    accent-color: #252a3a;
+    margin-right: 3px;
+}
+
+.lembrar_senha a {
+    color: #252a3a;
+    text-decoration: none;
+}
+
+.lembrar_senha a:hover {
+    text-decoration: underline;
+}
+
+.bt {
+    width: 100%;
+    height: 45px;
+    background: #252a3a;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.registrar {
+    font-size: .9em;
+    color: #252a3a;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px ;
+}
+
+.form_registro h2 {
+    font-size: 2em;
+    color: #252a3a;
+    text-align: center;
+}
+
+.registrar p a {
+    color: #252a3a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
+
+/*SOBRE------------------------------------------------------------------------------*/
+
+.wrppr2 {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    z-index: 2;
+}
+
+.wrppr2.active_popup2 {
+    transform: scale(1);
+}
+
+.wrppr2.active2 {
+    height: 520px;
+}
+
+.wrppr2 .icone_fechar2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #252a3a;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrppr2 .textme {
+    font-size: 1.1em;
+    color:#151822;
+    
+    text-align: center;
+    padding: 30px;
+}
+
+.wrppr2 .textme h2 {
+    margin-bottom: 10px;
+}
+
+.wrppr2 .textme p {
+    text-align: justify;
+    margin: 0 auto; 
+    max-width: 600px;
+}
+
+/*CONTATOS-----------------------------------------------------------------------------*/
+
+.wrppr3 {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+    z-index: 3;
+}
+
+.wrppr3.active_popup3 {
+    transform: scale(1);
+}
+
+.wrppr3.active3 {
+    height: 520px;
+}
+
+.navegacao .nav_bar3 {
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    background: transparent;
+    border: transparent;
+}
+
+.navegacao .nav_bar3::after {
+    content: '';
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navegacao .nav_bar3:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.wrppr3 .icone_fechar3{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #252a3a;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrppr3 .contatos .icone2 {
+    position: relative;
+    right: 5px;
+    top: 9px;
+    font-size: 30px;
+    color: #252a3a;
+    line-height: 57px;
+}
+
+.wrppr3 .contatos a{
+    width: 130px;
+    height: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #252a3a;
+    font-weight: bold;
+}
+
+.wrppr3 .contatos .my_mail{
+    width: 130px;
+    height: 50px;
+    font-size: 17px;
+    color: #252a3a;
+    font-weight: bold;
+}
