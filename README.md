@@ -1,0 +1,1 @@
+comando para baixar o projeto: git clone <url pega no git>
