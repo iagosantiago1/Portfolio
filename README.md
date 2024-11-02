@@ -5,3 +5,4 @@ comando para subir as alterações pro git: git push
 puxar alterções caso de erro ao subir as suas: git pull
 criar branch nova: git checkout -b nome
 mudar para branch existente: git checkout nome
+para mesclar alteraçoes de outra branch com a atual: git checkout (branch que recebera alteções) -> git merge (nome da brach com as alterçoes) -> git push
