@@ -10,6 +10,14 @@ const icone_fechar = document.querySelector('.icone_fechar');
 const icone_fechar2 = document.querySelector('.icone_fechar2');
 const icone_fechar3 = document.querySelector('.icone_fechar3');
 
+function auto_fechar() { 
+    wrapper.classList.remove('active_popup'); 
+    wrapper2.classList.remove('active_popup2'); 
+    wrapper3.classList.remove('active_popup3');
+}
+
+//-----------------------------------------------//
+
 registrarlink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
 });
@@ -19,6 +27,7 @@ loginlink.addEventListener('click', ()=> {
 });
 
 btnPopup.addEventListener('click', ()=> {
+    auto_fechar()
     wrapper.classList.add('active_popup');
 });
 
@@ -29,6 +38,7 @@ icone_fechar.addEventListener('click', ()=> {
 //-----------------------------------------------//
 
 btnPopup2.addEventListener('click', () => {
+    auto_fechar()
     wrapper2.classList.add('active_popup2');
 });
 
@@ -38,6 +48,7 @@ icone_fechar2.addEventListener('click', () => {
 
 //-----------------------------------------------//
 btnPopup3.addEventListener('click', () => {
+    auto_fechar()
     wrapper3.classList.add('active_popup3');
 });
 
